@@ -1,0 +1,15 @@
+# files
+*.png
+*.pth
+*.jpg
+*.csv
+*.log
+
+# dirs
+__pycache__/
+segment-bone/wandb/
+segment-bone/__pycache__
+/dataset
+
+
+
