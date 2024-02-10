@@ -1,0 +1,14 @@
+# files
+*.png
+*.pth
+*.jpg
+*.csv
+
+
+# dirs
+__pycache__/
+/wandb
+/dataset
+
+
+
