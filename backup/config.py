@@ -1,33 +1,20 @@
 import os
 
 
-# wandb config
-WANDB_GROUP = "wnadb_group"
-WANDB_NAME = "wandb_name"
-
-# KFold 중 사용할 fold [0, 1, 2, 3, 4]
-KFOLD_N = 0
-
-# pretrained된 pt를 사용할 경우
-PRETRAINED = False
-PRETRAINED_DIR = '/path/to/best_model.pt'
-
-# 하이퍼 파라미터
-BATCH_SIZE = 16
-BATCH_SIZE_VALID = 1
-LR = 1e-4
-RANDOM_SEED = 42
-NUM_EPOCHS = 100
-VAL_EVERY = 5
-
-# 저장 경로이자 추론 경로
-SAVED_DIR = f"/data/ephemeral/home/saved_model/{WANDB_NAME}"
-
 DATA_ROOT = "/data/ephemeral/home/data"
 
 IMAGE_ROOT = DATA_ROOT + "/train/DCM"
 LABEL_ROOT = DATA_ROOT + "/train/outputs_json"
 TEST_IMAGE_ROOT = DATA_ROOT + "/test/DCM"
+
+BATCH_SIZE = 16
+LR = 1e-4
+RANDOM_SEED = 31
+
+NUM_EPOCHS = 80
+VAL_EVERY = 3
+
+SAVED_DIR = "/data/ephemeral/home/saved_model"
 
 CLASSES = [
             'finger-1', 'finger-2', 'finger-3', 'finger-4', 'finger-5',
