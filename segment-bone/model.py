@@ -2,6 +2,8 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import segmentation_models_pytorch as smp
+
 from torchvision import models
 
 # FCN
@@ -215,3 +217,12 @@ class DeepLabV3p(nn.Module):
             out, size=upsample_size, mode="bilinear", align_corners=True
         )
         return out
+
+def UnetPlusPlus(encoder_name, encoder_weights, in_channels, num_classes):
+    model = smp.UnetPlusPlus(
+        encoder_name=encoder_name,
+        encoder_weights=encoder_weights,
+        in_channels=in_channels,
+        classes=num_classes
+        )
+    return model

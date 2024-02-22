@@ -20,7 +20,7 @@ from torch.utils.data import DataLoader
 import torch.optim.lr_scheduler as lr_scheduler
 
 from dataset import XRayDataset
-from model import DeepLabV3p, FCNResNet50 # 모델 import
+from model import DeepLabV3p, FCNResNet50, UnetPlusPlus # 모델 import
 
 import wandb
 
