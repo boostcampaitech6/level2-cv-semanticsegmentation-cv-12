@@ -20,7 +20,8 @@ from torch.utils.data import DataLoader
 import torch.optim.lr_scheduler as lr_scheduler
 
 from dataset import XRayDataset
-from model import DeepLabV3p, FCNResNet50 # 모델 import
+from model import DeepLabV3p, FCNResNet50
+from loss import calc_loss
 
 import wandb
 
@@ -250,7 +251,8 @@ if PRETRAINED:
     model = torch.load(PRETRAINED_DIR)
 
 # Loss function 정의
-criterion = nn.BCEWithLogitsLoss()
+# criterion = nn.BCEWithLogitsLoss()
+criterion = calc_loss
 
 # Optimizer 정의
 optimizer = optim.Adam(params=model.parameters(), lr=LR, weight_decay=1e-6)
