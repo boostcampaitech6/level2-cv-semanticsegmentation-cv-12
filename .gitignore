@@ -3,12 +3,10 @@
 *.pth
 *.jpg
 *.csv
-
+*.log
 
 # dirs
 __pycache__/
-/wandb
+segment-bone/wandb/
+segment-bone/__pycache__
 /dataset
-
-
-
