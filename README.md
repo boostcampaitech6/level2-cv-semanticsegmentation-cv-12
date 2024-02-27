@@ -91,6 +91,6 @@ Public, Private 2등!
 - Rotate
 - Crop
 
-### Combine Loss
+## Combine Loss
 - DICE + BCE
 - DICE + IOU
